@@ -16,11 +16,6 @@
         [Required]
         public string LastName { get; set; }
 
-        /*[Display(Name = "Fecha de nacimiento")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
-        [Required]
-        public DateTime Date { get; set; }*/
-
         [Display(Name = "Celular")]
         [MaxLength(50, ErrorMessage = "El campo {0} no puede tener más de {1} carácteres")]
         [Required]
