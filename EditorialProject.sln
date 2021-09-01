@@ -3,9 +3,50 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnd", "BackEnd", "{20339542-E03A-48B3-9547-6D2011F5E124}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{91513488-1A5C-4615-8186-98BD31B96A69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorialProject.Web", "EditorialProject.Web\EditorialProject.Web.csproj", "{625343C7-32B0-4742-B9F6-FC510A3B9993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorialProject.UIForms.Android", "EditorialProject.UIForms\EditorialProject.UIForms.Android\EditorialProject.UIForms.Android.csproj", "{49D60755-A659-42A0-92D1-3390A7D833A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorialProject.UIForms", "EditorialProject.UIForms\EditorialProject.UIForms\EditorialProject.UIForms.csproj", "{4D74B588-4181-494B-ABE7-C918A2E3F7E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorialProject.Common", "EditorialProject.Common\EditorialProject.Common.csproj", "{AF62AC28-30B9-4425-9522-A9219BCA09C7}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{625343C7-32B0-4742-B9F6-FC510A3B9993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625343C7-32B0-4742-B9F6-FC510A3B9993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625343C7-32B0-4742-B9F6-FC510A3B9993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625343C7-32B0-4742-B9F6-FC510A3B9993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D60755-A659-42A0-92D1-3390A7D833A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D60755-A659-42A0-92D1-3390A7D833A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D60755-A659-42A0-92D1-3390A7D833A8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{49D60755-A659-42A0-92D1-3390A7D833A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D60755-A659-42A0-92D1-3390A7D833A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D60755-A659-42A0-92D1-3390A7D833A8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4D74B588-4181-494B-ABE7-C918A2E3F7E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D74B588-4181-494B-ABE7-C918A2E3F7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D74B588-4181-494B-ABE7-C918A2E3F7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D74B588-4181-494B-ABE7-C918A2E3F7E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF62AC28-30B9-4425-9522-A9219BCA09C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF62AC28-30B9-4425-9522-A9219BCA09C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF62AC28-30B9-4425-9522-A9219BCA09C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF62AC28-30B9-4425-9522-A9219BCA09C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{625343C7-32B0-4742-B9F6-FC510A3B9993} = {20339542-E03A-48B3-9547-6D2011F5E124}
+		{49D60755-A659-42A0-92D1-3390A7D833A8} = {91513488-1A5C-4615-8186-98BD31B96A69}
+		{4D74B588-4181-494B-ABE7-C918A2E3F7E3} = {91513488-1A5C-4615-8186-98BD31B96A69}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F6C37D-9B9D-4B16-8706-2FA1322E974D}
