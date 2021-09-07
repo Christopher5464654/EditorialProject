@@ -29,9 +29,16 @@ namespace EditorialProject.Web.Data
                 var user = await CheckUserAsync("Doe", "John", "john.doe@gmail.com", "8888888888", "123456", "Admin");
                 await CheckAdminAsync(user);
             }
-            await CheckUserAsync("Doe", "John", "john.doe@gmail.com", "8888888888", "123456", "Admin");
-            await CheckUserAsync("Doe", "Jane", "jane.doe@gmail.com", "54654654", "123456", "Writer");
-            await CheckUserAsync("Doe", "Gus", "gus.doe@gmail.com", "6465454", "123456", "Reader");
+            if (!this.dataContext.Writers.Any())
+            {
+                var user = await CheckUserAsync("Doe", "Jane", "jane.doe@gmail.com", "54654654", "123456", "Writer");
+                await CheckWriterAsync(user);
+            }
+            if (!this.dataContext.Readers.Any())
+            {
+                var user = await CheckUserAsync("Doe", "Gus", "gus.doe@gmail.com", "6465454", "123456", "Reader"); 
+                await CheckReaderAsync(user);
+            }
         }
 
         private async Task<User> CheckUserAsync(string lastName, string firstName, string mail, string phone, string password, string rol)
@@ -60,6 +67,18 @@ namespace EditorialProject.Web.Data
         private async Task CheckAdminAsync(User user)
         {
             this.dataContext.Admins.Add(new Admin { User = user });
+            await this.dataContext.SaveChangesAsync();
+        }
+
+        private async Task CheckWriterAsync(User user)
+        {
+            this.dataContext.Writers.Add(new Writer { User = user });
+            await this.dataContext.SaveChangesAsync();
+        }
+
+        private async Task CheckReaderAsync(User user)
+        {
+            this.dataContext.Readers.Add(new Reader { User = user });
             await this.dataContext.SaveChangesAsync();
         }
     }
