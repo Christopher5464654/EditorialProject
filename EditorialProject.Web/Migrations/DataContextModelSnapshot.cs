@@ -26,6 +26,31 @@ namespace EditorialProject.Web.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("NumberExt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("NumberInt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("PostalCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Town")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
@@ -53,7 +78,7 @@ namespace EditorialProject.Web.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Readers");
+                    b.ToTable("Reader");
                 });
 
             modelBuilder.Entity("EditorialProject.Web.Data.Entities.User", b =>

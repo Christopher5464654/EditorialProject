@@ -36,7 +36,7 @@ namespace EditorialProject.Web.Data
             }
             if (!this.dataContext.Readers.Any())
             {
-                var user = await CheckUserAsync("Doe", "Gus", "gus.doe@gmail.com", "6465454", "123456", "Reader"); 
+                var user = await CheckUserAsync("Doe", "Gus", "gus.doe@gmail.com", "6465454", "123456", "Reader");
                 await CheckReaderAsync(user);
             }
         }

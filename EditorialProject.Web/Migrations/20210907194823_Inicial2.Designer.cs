@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EditorialProject.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210901180010_Inicial")]
-    partial class Inicial
+    [Migration("20210907194823_Inicial2")]
+    partial class Inicial2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,31 @@ namespace EditorialProject.Web.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NumberExt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("NumberInt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("PostalCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Town")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -55,7 +80,7 @@ namespace EditorialProject.Web.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Readers");
+                    b.ToTable("Reader");
                 });
 
             modelBuilder.Entity("EditorialProject.Web.Data.Entities.User", b =>

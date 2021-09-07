@@ -10,6 +10,11 @@
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Writer> Writers { get; set; }
         public DbSet<Reader> Readers { get; set; }
+        public DbSet<Reader> Editions { get; set; }
+        public DbSet<Reader> Formats { get; set; }
+        public DbSet<Reader> Genres { get; set; }
+        public DbSet<Reader> Lenguages { get; set; }
+        public DbSet<Reader> States { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {

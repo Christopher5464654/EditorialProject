@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace EditorialProject.Web.Data.Entities
 {
-    public class Edition
+    public class Edition 
     {
         public int Id { get; set; }
 

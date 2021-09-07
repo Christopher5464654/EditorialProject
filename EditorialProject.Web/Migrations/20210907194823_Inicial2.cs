@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EditorialProject.Web.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Inicial2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -75,7 +75,12 @@ namespace EditorialProject.Web.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<string>(nullable: true)
+                    UserId = table.Column<string>(nullable: true),
+                    Street = table.Column<string>(maxLength: 50, nullable: false),
+                    NumberExt = table.Column<string>(maxLength: 50, nullable: false),
+                    NumberInt = table.Column<string>(maxLength: 50, nullable: false),
+                    Town = table.Column<string>(maxLength: 50, nullable: false),
+                    PostalCode = table.Column<string>(maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -174,7 +179,7 @@ namespace EditorialProject.Web.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Readers",
+                name: "Reader",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -184,9 +189,9 @@ namespace EditorialProject.Web.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Readers", x => x.Id);
+                    table.PrimaryKey("PK_Reader", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Readers_AspNetUsers_UserId",
+                        name: "FK_Reader_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
@@ -258,8 +263,8 @@ namespace EditorialProject.Web.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Readers_UserId",
-                table: "Readers",
+                name: "IX_Reader_UserId",
+                table: "Reader",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
@@ -289,7 +294,7 @@ namespace EditorialProject.Web.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Readers");
+                name: "Reader");
 
             migrationBuilder.DropTable(
                 name: "Writers");
