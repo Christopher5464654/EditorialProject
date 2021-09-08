@@ -43,6 +43,8 @@ namespace EditorialProject.Web
 
             services.AddScoped<IUserHelper, UserHelper>();
 
+            services.AddScoped<IImageHelper, ImageHelper>();
+
             services.AddControllersWithViews();
         }
 
