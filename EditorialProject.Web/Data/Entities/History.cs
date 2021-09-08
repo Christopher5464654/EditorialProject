@@ -12,9 +12,5 @@ namespace EditorialProject.Web.Data.Entities
         public string Title { get; set; }
 
         public string Synopsis { get; set; }
-
-
-
-
     }
 }

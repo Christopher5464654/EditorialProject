@@ -27,7 +27,7 @@ namespace EditorialProject.Web.Data
             if (!this.dataContext.Admins.Any())
             {
                 var user = await CheckUserAsync("Doe", "John", "john.doe@gmail.com", "8888888888", "123456", "Admin");
-                await CheckAdminAsync(user);
+                await CheckAdminAsync(user, "Conocida", "156", "55", "Pable Neruda", "54587");
             }
             if (!this.dataContext.Writers.Any())
             {
@@ -64,9 +64,9 @@ namespace EditorialProject.Web.Data
             return user;
         }
 
-        private async Task CheckAdminAsync(User user)
+        private async Task CheckAdminAsync(User user, string street, string numberExt, string numberInt, string town, string postalCode)
         {
-            this.dataContext.Admins.Add(new Admin { User = user });
+            this.dataContext.Admins.Add(new Admin { User = user, Street = street, NumberExt = numberExt, NumberInt = numberInt, Town = town, PostalCode= postalCode });
             await this.dataContext.SaveChangesAsync();
         }
 
