@@ -24,10 +24,11 @@ namespace EditorialProject.Web.Data
             await this.userHelper.CheckRoleAsync("Admin");
             await this.userHelper.CheckRoleAsync("Writer");
             await this.userHelper.CheckRoleAsync("Reader");
+            await this.userHelper.CheckRoleAsync("Moderator");
             if (!this.dataContext.Admins.Any())
             {
                 var user = await CheckUserAsync("Doe", "John", "john.doe@gmail.com", "8888888888", "123456", "Admin");
-                await CheckAdminAsync(user, "Conocida", "156", "55", "Pable Neruda", "54587");
+                await CheckAdminAsync(user);
             }
             if (!this.dataContext.Writers.Any())
             {
@@ -38,6 +39,11 @@ namespace EditorialProject.Web.Data
             {
                 var user = await CheckUserAsync("Doe", "Gus", "gus.doe@gmail.com", "6465454", "123456", "Reader");
                 await CheckReaderAsync(user);
+            }
+            if (!this.dataContext.Moderators.Any())
+            {
+                var user = await CheckUserAsync("Doe", "Chris", "chris.doe@gmail.com", "54646464", "57897980", "Moderator");
+                await CheckModeratorAsync(user, "Zapata", 157, 545, "Don Pancho", 45489);
             }
         }
 
@@ -64,9 +70,9 @@ namespace EditorialProject.Web.Data
             return user;
         }
 
-        private async Task CheckAdminAsync(User user, string street, string numberExt, string numberInt, string town, string postalCode)
+        private async Task CheckAdminAsync(User user)
         {
-            this.dataContext.Admins.Add(new Admin { User = user, Street = street, NumberExt = numberExt, NumberInt = numberInt, Town = town, PostalCode= postalCode });
+            this.dataContext.Admins.Add(new Admin { User = user});
             await this.dataContext.SaveChangesAsync();
         }
 
@@ -79,6 +85,12 @@ namespace EditorialProject.Web.Data
         private async Task CheckReaderAsync(User user)
         {
             this.dataContext.Readers.Add(new Reader { User = user });
+            await this.dataContext.SaveChangesAsync();
+        }
+
+        private async Task CheckModeratorAsync(User user, string street, int numberExt, int numberInt, string town, int postalCode)
+        {
+            this.dataContext.Moderators.Add(new Moderator { User = user, Street = street, NumberExt = numberExt, NumberInt = numberInt, Town = town, PostalCode = postalCode });
             await this.dataContext.SaveChangesAsync();
         }
     }

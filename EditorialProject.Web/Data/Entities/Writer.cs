@@ -5,7 +5,6 @@
     public class Writer : IEntity
     {
         public int Id { get; set; }
-
         public User User { get; set; }
 
         [Display(Name = "Fecha de nacimiento")]
