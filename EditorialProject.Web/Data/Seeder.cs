@@ -43,7 +43,7 @@ namespace EditorialProject.Web.Data
             if (!this.dataContext.Moderators.Any())
             {
                 var user = await CheckUserAsync("Doe", "Chris", "chris.doe@gmail.com", "54646464", "57897980", "Moderator");
-                await CheckModeratorAsync(user, "Zapata", 157, 545, "Don Pancho", 45489);
+                await CheckModeratorAsync(user);
             }
         }
 
@@ -88,9 +88,9 @@ namespace EditorialProject.Web.Data
             await this.dataContext.SaveChangesAsync();
         }
 
-        private async Task CheckModeratorAsync(User user, string street, int numberExt, int numberInt, string town, int postalCode)
+        private async Task CheckModeratorAsync(User user)
         {
-            this.dataContext.Moderators.Add(new Moderator { User = user, Street = street, NumberExt = numberExt, NumberInt = numberInt, Town = town, PostalCode = postalCode });
+            this.dataContext.Moderators.Add(new Moderator { User = user});
             await this.dataContext.SaveChangesAsync();
         }
     }

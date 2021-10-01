@@ -1,13 +1,12 @@
 ﻿namespace EditorialProject.Web.Data.Entities
 {
-    using System;
     using System.Collections.Generic;
-
-    public class Reader : IEntity
+    public class Status : IEntity
     {
         public int Id { get; set; }
-        public DateTime BirthDate { get; set; }
+        public string Name { get; set; }
         public ICollection<Suscription> Suscriptions { get; set; }
-        public User User { get; set; }
+        public ICollection<Validation> Validations { get; set; }
+        public ICollection<Moderator> Moderators { get; set; }
     }
 }

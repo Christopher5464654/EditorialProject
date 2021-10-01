@@ -1,7 +1,7 @@
 ﻿namespace EditorialProject.Web.Data.Entities
 {
     using System.Collections.Generic;
-    public class Edition : IEntity
+    public class FileFormat : IEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }
