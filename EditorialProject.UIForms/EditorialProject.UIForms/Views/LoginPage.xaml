@@ -6,7 +6,8 @@
              Title="Login">
     <ContentPage.Content>
         <StackLayout>
-            <ScrollView BindingContext="{Binding Login}">
+            <ScrollView BindingContext="{Binding Login}"
+                        Padding="10">
                 <StackLayout>
                     <Label Text="Email"></Label>
                     <Entry Keyboard="Email"
