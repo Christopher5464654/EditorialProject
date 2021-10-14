@@ -7,13 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnd", "BackEnd", "{2033
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{91513488-1A5C-4615-8186-98BD31B96A69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorialProject.Web", "EditorialProject.Web\EditorialProject.Web.csproj", "{625343C7-32B0-4742-B9F6-FC510A3B9993}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EditorialProject.Web", "EditorialProject.Web\EditorialProject.Web.csproj", "{625343C7-32B0-4742-B9F6-FC510A3B9993}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorialProject.UIForms.Android", "EditorialProject.UIForms\EditorialProject.UIForms.Android\EditorialProject.UIForms.Android.csproj", "{49D60755-A659-42A0-92D1-3390A7D833A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorialProject.UIForms", "EditorialProject.UIForms\EditorialProject.UIForms\EditorialProject.UIForms.csproj", "{4D74B588-4181-494B-ABE7-C918A2E3F7E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EditorialProject.UIForms", "EditorialProject.UIForms\EditorialProject.UIForms\EditorialProject.UIForms.csproj", "{4D74B588-4181-494B-ABE7-C918A2E3F7E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorialProject.Common", "EditorialProject.Common\EditorialProject.Common.csproj", "{AF62AC28-30B9-4425-9522-A9219BCA09C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EditorialProject.Common", "EditorialProject.Common\EditorialProject.Common.csproj", "{AF62AC28-30B9-4425-9522-A9219BCA09C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

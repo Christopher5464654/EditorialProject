@@ -1,5 +1,6 @@
 using EditorialProject.Web.Data;
 using EditorialProject.Web.Data.Entities;
+using EditorialProject.Web.Data.Repositories;
 using EditorialProject.Web.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -42,8 +43,12 @@ namespace EditorialProject.Web
             services.AddTransient<Seeder>();
 
             services.AddScoped<IUserHelper, UserHelper>();
-
             services.AddScoped<IImageHelper, ImageHelper>();
+            services.AddScoped<IEditionRepository, EditionRepository>();
+            services.AddScoped<IFileFormatRepository, FileFormatRepository>();
+            services.AddScoped<IGenreTypeRepository, GenreTypeRepository>();
+            services.AddScoped<ILanguageRepository, LanguageRepository>();
+            services.AddScoped<IStatusRepository, StatusRepository>();
 
             services.AddControllersWithViews();
         }
