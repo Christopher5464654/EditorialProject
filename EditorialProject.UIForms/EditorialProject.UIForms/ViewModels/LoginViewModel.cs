@@ -1,5 +1,6 @@
 ﻿namespace EditorialProject.UIForms.ViewModels
 {
+    using EditorialProject.UIForms.Views;
     using GalaSoft.MvvmLight.Command;
     using System.Windows.Input;
     using Xamarin.Forms;
@@ -14,6 +15,12 @@
             {
                 return new RelayCommand(Login);
             }
+        }
+
+        public LoginViewModel()
+        {
+            this.Email = "jane.doe@gmail.com";
+            this.Password = "123456";
         }
 
         private async void Login()
@@ -33,8 +40,10 @@
                 await Application.Current.MainPage.DisplayAlert("Error", "Email o Contraseña incorrecto", "Aceptar");
                 return;
             }
-            await Application.Current.MainPage.DisplayAlert("Ok", "¡Listooo!", "Aceptar");
-            return;
+            //await Application.Current.MainPage.DisplayAlert("Ok", "¡Listooo!", "Aceptar");
+            //return;
+            MainViewModel.GetInstance().Editions = new EditionsViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new EditionsPage());
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using EditorialProject.UIForms.Views;
+﻿using EditorialProject.UIForms.ViewModels;
+using EditorialProject.UIForms.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,6 +12,7 @@ namespace EditorialProject.UIForms
         {
             InitializeComponent();
 
+            MainViewModel.GetInstance().Login = new LoginViewModel();
             MainPage = new NavigationPage(new LoginPage());
         }
 
