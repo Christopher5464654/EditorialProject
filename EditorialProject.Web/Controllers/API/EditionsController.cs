@@ -6,7 +6,7 @@
     using Microsoft.AspNetCore.Mvc;
     
     [Route("API/[Controller]")]
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class EditionsController : Controller
     {
         private readonly IEditionRepository editionRepository;

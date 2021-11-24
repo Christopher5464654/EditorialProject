@@ -4,12 +4,49 @@
              x:Class="EditorialProject.UIForms.Views.EditionsPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="Editions">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="ic_perm_device_information" Command="{Binding AboutCommand}"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding Editions}"
                      Padding="10">
             <ListView ItemsSource="{Binding Editions}"
-                      HasUnevenRows="True">
+                      HasUnevenRows="True"
+                      IsPullToRefreshEnabled="True"
+                      IsRefreshing="{Binding IsRefreshing}"
+                      RefreshCommand="{Binding RefreshCommand}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto">
+                                    </ColumnDefinition>
+                                    <ColumnDefinition Width="*">
+                                    </ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0"
+                                             VerticalOptions="Center">
+                                    <Label Text="{Binding Id}"
+                                           TextColor="Black"
+                                           FontAttributes="Bold"
+                                           FontSize="Large">
 
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1"
+                                             VerticalOptions="Center">
+                                    <Label Text="{Binding Name}"
+                                           TextColor="Black"
+                                           FontSize="Title">
+
+                                    </Label>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
     </ContentPage.Content>

@@ -17,5 +17,10 @@
 
         [JsonProperty("moderators")]
         public object Moderators { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id} {Name}";
+        }
     }
 }

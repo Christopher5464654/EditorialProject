@@ -11,5 +11,10 @@
 
         [JsonProperty("novels")]
         public object Novels { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id} {Name}";
+        }
     }
 }
