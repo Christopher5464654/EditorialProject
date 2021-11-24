@@ -14,12 +14,14 @@
             <Image Source="Libreria"
                            HeightRequest="100">
             </Image>
-            <Label Text="Welcome to your editorial"
+            <Label Text="In this app you can upload all the drafts of your writing that you want so that others know about it. In this app it is strictly forbidden to upload copyrighted works without the prior authorization of the writer. Have fun writing!. "
+                   HorizontalTextAlignment="Center"
                    TextColor="Black"
                    FontAttributes="Bold"
-                   FontSize="Title"
-                   Padding="20"
-                   HorizontalOptions="CenterAndExpand" />
+                   FontSize="Body"
+                   Padding="20">
+
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

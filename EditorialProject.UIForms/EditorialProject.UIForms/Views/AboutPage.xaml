@@ -5,15 +5,48 @@
              Title="About">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="App Develomentp by: "
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label Text="Christopher "
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label Text="Gustavo "
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="App Develomentp by: " 
+                   HorizontalOptions="CenterAndExpand" 
+                   Padding="10"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="Large"/>
+            <Image Source="Perfil1"
+                           HeightRequest="70">
+            </Image>
+            <Label Text="Jesús Christopher Martínez Carrera"
+                   HorizontalOptions="CenterAndExpand" 
+                   Padding="5"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+            <Image Source="Perfil2"
+                           HeightRequest="70">
+            </Image>
+            <Label Text="Gustavo Bautista Romero"
+                   HorizontalOptions="CenterAndExpand" 
+                   Padding="5"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+            <Label Text="Adviser: " 
+                   HorizontalOptions="CenterAndExpand" 
+                   Padding="10"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="Large"/>
+            <Image Source="Perfil3"
+                           HeightRequest="70">
+            </Image>
+            <Label Text="Eduardo Fong Dubon"
+                   HorizontalOptions="CenterAndExpand" 
+                   Padding="5"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+            <Label Text="We are students of Engineering in Information Technology and Internet at the Madero University. We learned about ASP.NET Core with the Azure cloud              and APIs with Xamarin Forms."
+                    HorizontalTextAlignment="Center"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="Body"
+                   Padding="20"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
